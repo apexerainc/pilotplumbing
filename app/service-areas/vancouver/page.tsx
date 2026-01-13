@@ -2,6 +2,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Phone, MapPin, Clock, CheckCircle, ArrowRight, Shield, Droplets, Building2, Home } from 'lucide-react'
+import { ServiceAreaMap } from "@/components/service-area-map"
 
 export default function VancouverPage() {
   const neighborhoods = [
@@ -75,14 +76,14 @@ export default function VancouverPage() {
                 comprehensive services to homes and businesses throughout Clark County. Our local technicians understand the specific plumbing challenges of the Pacific Northwest—from heavy rain impacting drainage systems to older pipe infrastructure in historic neighborhoods.
               </p>
               <p>
-                We proudly serve all Vancouver neighborhoods including the historic <strong>Hough</strong> and <strong>Arnada</strong> districts, 
-                the family-focused communities of <strong>Fisher's Landing</strong> and <strong>Cascade Park</strong>, 
-                and the rapidly growing areas of <strong>Salmon Creek</strong> and <strong>Felida</strong>. 
-                Whether you have a Victorian home near downtown or a modern build in East Vancouver, our team is equipped to 
+                We proudly serve all Vancouver neighborhoods including the historic <strong>Hough</strong> and <strong>Arnada</strong> districts,
+                the family-focused communities of <strong>Fisher's Landing</strong> and <strong>Cascade Park</strong>,
+                and the rapidly growing areas of <strong>Salmon Creek</strong> and <strong>Felida</strong>.
+                Whether you have a Victorian home near downtown or a modern build in East Vancouver, our team is equipped to
                 handle any plumbing or restoration challenge.
               </p>
               <p>
-                Vancouver properties face specific risks including tree root intrusion in sewer lines, damp basements during the rainy season, and 
+                Vancouver properties face specific risks including tree root intrusion in sewer lines, damp basements during the rainy season, and
                 older galvanized piping issues. Our team is trained to address these local challenges with proven techniques and modern technology.
               </p>
             </div>
@@ -170,7 +171,7 @@ export default function VancouverPage() {
                   <h3 className="text-xl font-bold">Plumbing Services</h3>
                 </div>
                 <p className="text-muted-foreground mb-4">
-                  From leak repairs and drain cleaning to water heater installation and repiping. 
+                  From leak repairs and drain cleaning to water heater installation and repiping.
                   Our licensed plumbers handle all residential and commercial plumbing needs.
                 </p>
                 <Button asChild variant="link" className="p-0 text-[#5dceeb]">
@@ -190,7 +191,7 @@ export default function VancouverPage() {
                   <h3 className="text-xl font-bold">Commercial Services</h3>
                 </div>
                 <p className="text-muted-foreground mb-4">
-                  Comprehensive plumbing and restoration for Vancouver businesses. 
+                  Comprehensive plumbing and restoration for Vancouver businesses.
                   We minimize downtime and protect your commercial investment with priority expert service.
                 </p>
                 <Button asChild variant="link" className="p-0 text-[#5dceeb]">
@@ -258,6 +259,15 @@ export default function VancouverPage() {
                 <div className="text-sm text-muted-foreground">Response</div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 lg:py-24 bg-muted">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-12 text-center">Our Service Area</h2>
+          <div className="max-w-4xl mx-auto">
+            <ServiceAreaMap />
           </div>
         </div>
       </section>

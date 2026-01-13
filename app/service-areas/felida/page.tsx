@@ -4,12 +4,19 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Phone, MapPin, CheckCircle, ArrowRight, Shield, Droplets, Building2, Home } from 'lucide-react'
 import { ServiceAreaMap } from "@/components/service-area-map"
 
-export default function BattleGroundPage() {
+export default function FelidaPage() {
+    const neighborhoods = [
+        { name: "Felida Proper", description: "Upscale homes with large lots" },
+        { name: "Lake Shore", description: "Waterfront community on Vancouver Lake" },
+        { name: "Erickson Farms", description: "Newer development with community feel" },
+        { name: "Cougar Creek", description: "Quiet residential streets near trails" },
+    ]
+
     const nearbyAreas = [
         { name: "Vancouver", slug: "vancouver" },
-        { name: "Ridgefield", slug: "ridgefield" },
-        { name: "Orchards", slug: "orchards" },
         { name: "Salmon Creek", slug: "salmon-creek" },
+        { name: "Hazel Dell", slug: "hazel-dell" },
+        { name: "Ridgefield", slug: "ridgefield" },
     ]
 
     return (
@@ -22,13 +29,13 @@ export default function BattleGroundPage() {
                     <div className="max-w-3xl">
                         <div className="inline-flex items-center gap-2 bg-[#5dceeb]/20 backdrop-blur-sm border border-[#5dceeb]/30 px-4 py-2 rounded-full mb-6">
                             <MapPin className="h-4 w-4 text-[#5dceeb]" />
-                            <span className="text-sm font-medium">Serving Battle Ground, WA</span>
+                            <span className="text-sm font-medium">Serving Felida, WA</span>
                         </div>
                         <h1 className="text-4xl lg:text-5xl font-bold mb-6 text-balance">
-                            Plumbing & Restoration in Battle Ground
+                            Plumbing & Restoration in Felida
                         </h1>
                         <p className="text-xl text-white/90 mb-8 text-pretty">
-                            Reliable, local plumbing and restoration services for Battle Ground homeowners and businesses. 24/7 Emergency response.
+                            Premium plumbing services for Felida's premier neighborhoods. We provide discreet, professional service for your home.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4">
                             <Button asChild size="lg" className="bg-[#5dceeb] hover:bg-[#5dceeb]/90 text-white border-0">
@@ -45,14 +52,15 @@ export default function BattleGroundPage() {
             <section className="py-16 lg:py-24">
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
-                        <h2 className="text-3xl font-bold mb-6">Battle Ground's Plumbing Experts</h2>
+                        <h2 className="text-3xl font-bold mb-6">Felida's Choice for Quality Plumbing</h2>
                         <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
                             <p>
-                                Pilot Plumbing & Drain serves the Battle Ground community with integrity and expertise.
-                                Our team handles rural well system issues, septic line plumbing, and standard residential repairs.
+                                Felida is known for its beautiful homes and quiet streets. Pilot Plumbing & Drain upholds the high standards of the community
+                                with exceptional workmanship and respect for your property.
                             </p>
                             <p>
-                                If you experience water damage from a storm or a burst pipe, we can be on-site quickly to mitigate damage and restore your property.
+                                Whether you're remodeling a bathroom in Lake Shore or dealing with a sump pump issue in Erickson Farms, our team arrives on time
+                                and ready to work. We understand the specific plumbing configurations of custom homes in the area.
                             </p>
                         </div>
                     </div>
@@ -61,15 +69,29 @@ export default function BattleGroundPage() {
 
             <section className="py-16 lg:py-24 bg-muted">
                 <div className="container mx-auto px-4">
+                    <h2 className="text-3xl font-bold mb-12 text-center">Neighborhoods We Serve</h2>
+                    <div className="grid md:grid-cols-3 gap-4 max-w-5xl mx-auto">
+                        {neighborhoods.map((n) => (
+                            <div key={n.name} className="bg-background rounded-lg p-4 border hover:border-[#5dceeb]/50 hover:shadow-md transition-all">
+                                <h3 className="font-semibold text-foreground mb-1">{n.name}</h3>
+                                <p className="text-sm text-muted-foreground">{n.description}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            <section className="py-16 lg:py-24">
+                <div className="container mx-auto px-4">
                     <h2 className="text-3xl font-bold mb-4 text-center">Our Services</h2>
                     <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mt-12">
                         <Card className="border-2 hover:border-[#5dceeb]/50 transition-all">
                             <CardContent className="p-6">
                                 <div className="flex items-center gap-3 mb-4">
                                     <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center"><Droplets className="h-6 w-6 text-blue-500" /></div>
-                                    <h3 className="text-xl font-bold">Water Restoration</h3>
+                                    <h3 className="text-xl font-bold">Water Damage Restoration</h3>
                                 </div>
-                                <p className="text-muted-foreground mb-4">Professional clean up for floods and water damage.</p>
+                                <p className="text-muted-foreground mb-4">Discreet and efficient water damage mitigation.</p>
                                 <Button asChild variant="link" className="p-0 text-[#5dceeb]"><Link href="/services/water-damage">Learn More <ArrowRight className="ml-1 h-4 w-4" /></Link></Button>
                             </CardContent>
                         </Card>
@@ -77,9 +99,9 @@ export default function BattleGroundPage() {
                             <CardContent className="p-6">
                                 <div className="flex items-center gap-3 mb-4">
                                     <div className="h-12 w-12 bg-orange-500/10 rounded-lg flex items-center justify-center"><Home className="h-6 w-6 text-orange-500" /></div>
-                                    <h3 className="text-xl font-bold">Plumbing</h3>
+                                    <h3 className="text-xl font-bold">Plumbing Excellence</h3>
                                 </div>
-                                <p className="text-muted-foreground mb-4">Leaky faucets, toilets, water heaters, and pipe repair.</p>
+                                <p className="text-muted-foreground mb-4">High-end fixture installation and precision repairs.</p>
                                 <Button asChild variant="link" className="p-0 text-[#5dceeb]"><Link href="/contact">Contact Us <ArrowRight className="ml-1 h-4 w-4" /></Link></Button>
                             </CardContent>
                         </Card>
@@ -96,12 +118,12 @@ export default function BattleGroundPage() {
                 </div>
             </section>
 
-            <section className="py-16 lg:py-24">
+            <section className="py-16 lg:py-24 bg-muted">
                 <div className="container mx-auto px-4 text-center">
                     <h2 className="text-3xl font-bold mb-4">Nearby Areas</h2>
                     <div className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto mt-8">
                         {nearbyAreas.map((area) => (
-                            <Link key={area.slug} href={`/service-areas/${area.slug}`} className="bg-muted hover:bg-[#5dceeb]/10 px-6 py-3 rounded-full font-medium transition-colors border hover:border-[#5dceeb]/50">{area.name}</Link>
+                            <Link key={area.slug} href={`/service-areas/${area.slug}`} className="bg-background hover:bg-[#5dceeb]/10 px-6 py-3 rounded-full font-medium transition-colors border hover:border-[#5dceeb]/50">{area.name}</Link>
                         ))}
                     </div>
                 </div>

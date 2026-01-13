@@ -26,6 +26,8 @@ const serviceAreas = [
   { name: "Ridgefield", slug: "ridgefield", icon: Home, description: "Growing community north of Vancouver" },
   { name: "Salmon Creek", slug: "salmon-creek", icon: Home, description: "Waughop Lake and WSU Vancouver area" },
   { name: "Orchards", slug: "orchards", icon: Home, description: "Five Corners and Orchards area" },
+  { name: "Hazel Dell", slug: "hazel-dell", icon: Home, description: "Busy commercial and residential hub" },
+  { name: "Felida", slug: "felida", icon: Home, description: "Upscale community plumbing experts" },
 ]
 
 export default function ServiceAreasPage() {

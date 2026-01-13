@@ -138,6 +138,12 @@ export function Header() {
                   <Link href="/service-areas/orchards" className="block px-3 py-2 text-sm hover:bg-muted rounded-md">
                     Orchards
                   </Link>
+                  <Link href="/service-areas/hazel-dell" className="block px-3 py-2 text-sm hover:bg-muted rounded-md">
+                    Hazel Dell
+                  </Link>
+                  <Link href="/service-areas/felida" className="block px-3 py-2 text-sm hover:bg-muted rounded-md">
+                    Felida
+                  </Link>
                   <Link
                     href="/service-areas"
                     className="col-span-2 block px-3 py-2 text-sm font-medium text-primary hover:bg-muted rounded-md"
@@ -233,6 +239,27 @@ export function Header() {
                     </Link>
                     <Link href="/service-areas/camas" className="block text-sm">
                       Camas
+                    </Link>
+                    <Link href="/service-areas/washougal" className="block text-sm">
+                      Washougal
+                    </Link>
+                    <Link href="/service-areas/battle-ground" className="block text-sm">
+                      Battle Ground
+                    </Link>
+                    <Link href="/service-areas/ridgefield" className="block text-sm">
+                      Ridgefield
+                    </Link>
+                    <Link href="/service-areas/salmon-creek" className="block text-sm">
+                      Salmon Creek
+                    </Link>
+                    <Link href="/service-areas/orchards" className="block text-sm">
+                      Orchards
+                    </Link>
+                    <Link href="/service-areas/hazel-dell" className="block text-sm">
+                      Hazel Dell
+                    </Link>
+                    <Link href="/service-areas/felida" className="block text-sm">
+                      Felida
                     </Link>
                   </div>
                 )}

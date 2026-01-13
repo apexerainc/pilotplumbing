@@ -2,6 +2,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Phone, MapPin, CheckCircle, ArrowRight, Shield, Droplets, Building2, Home } from 'lucide-react'
+import { ServiceAreaMap } from "@/components/service-area-map"
 
 export default function WashougalPage() {
     const neighborhoods = [
@@ -85,6 +86,15 @@ export default function WashougalPage() {
                                 <Button asChild variant="link" className="p-0 text-[#5dceeb]"><Link href="/contact">Contact Us <ArrowRight className="ml-1 h-4 w-4" /></Link></Button>
                             </CardContent>
                         </Card>
+                    </div>
+                </div>
+            </section>
+
+            <section className="py-16 lg:py-24">
+                <div className="container mx-auto px-4">
+                    <h2 className="text-3xl font-bold mb-12 text-center">Our Service Area</h2>
+                    <div className="max-w-4xl mx-auto">
+                        <ServiceAreaMap />
                     </div>
                 </div>
             </section>
